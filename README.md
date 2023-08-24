@@ -1,6 +1,6 @@
-# clic2021-devkit
+# CLIC-devkit
 
-Challenge homepage: [compression.cc](http://www.compression.cc).
+Challenge homepage: [compression.cc](https://www.compression.cc).
 
 
 ## Downloading the Video challenge Data
