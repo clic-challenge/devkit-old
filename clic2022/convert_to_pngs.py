@@ -17,7 +17,9 @@ def _convert_video_to_pngs(video_path: str, png_out_root: str):
     os.makedirs(os.path.dirname(out_path_base), exist_ok=True)
 
     subprocess.run([
-        "ffmpeg", "-i", video_path, "-filter_complex", "extractplanes=y+u+v[y][u][v]",
+        "ffmpeg", "-i", video_path,
+        "-vsync", "vfr",
+        "-filter_complex", "extractplanes=y+u+v[y][u][v]",
         "-map", "[y]", out_path_base + "_y.png",
         "-map", "[u]", out_path_base + "_u.png",
         "-map", "[v]", out_path_base + "_v.png",
